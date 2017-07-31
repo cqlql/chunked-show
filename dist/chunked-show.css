@@ -1,0 +1,87 @@
+
+.chunked-show {
+    position: fixed;
+    left: 0;
+    right: 0;
+    top: 0;
+    bottom: 0;
+}
+.chunked-show .cs-top-half {
+    position: relative;
+    background-color: #fff;
+    overflow: auto;
+    height: 100%;
+}
+.chunked-show .cs-bottom-half {
+    position: absolute;
+    left: 0;
+    right: 0;
+    top: 0;
+    bottom: 0;
+    display: none;
+    /*background-color: #f8f8f8;*/
+    overflow: auto;
+}
+.chunked-show .cs-cont {}
+.chunked-show .cs-drag-bar {
+    /*用fixed因为所在块有滚动条情况，会被滚动隐藏*/
+    position: relative;
+    left: 0;
+    width: 100%;
+    z-index: 1;
+    background-color: #00b5ff;
+    height: 1px;
+    -webkit-transform: translate3d(0, 0, 0);
+    transform: translate3d(0, 0, 0);
+    display: none;
+}
+.chunked-show .cs-drag-bar b {
+    display: block;
+    height: 15px;
+    width: 55px;
+    background-color: #00b5ff;
+    position: absolute;
+    left: 50%;
+    margin-left: -27.5px;
+    border-radius: 0 0 3px 3px;
+}
+.chunked-show .cs-drag-bar b:before {
+    content: '';
+    display: block;
+    height: 0;
+    width: 37px;
+    position: absolute;
+    top: 4px;
+    left: 9px;
+    border-top: 1px solid #0094cc;
+    border-bottom: 1px solid #54d0ff;
+}
+.chunked-show .cs-drag-bar b:after {
+    content: '';
+    display: block;
+    height: 0;
+    width: 37px;
+    position: absolute;
+    top: 8px;
+    left: 9px;
+    border-top: 1px solid #0094cc;
+    border-bottom: 1px solid #54d0ff;
+}
+.chunked-show .cs-drag-bar:before {
+    content: '';
+    display: block;
+    height: 38px;
+    width: 100px;
+    position: absolute;
+    top: -12px;
+    left: 50%;
+    -webkit-transform: translateX(-50%);
+    transform: translateX(-50%);
+}
+.chunked-show.show .cs-top-half {
+    height: auto;
+}
+.chunked-show.show .cs-bottom-half,
+    .chunked-show.show .cs-drag-bar {
+    display: block;
+}
