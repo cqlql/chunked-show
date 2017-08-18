@@ -52,7 +52,7 @@ gulp.task('def', async function () {
     plugins: [
       resolve({
         customResolveOptions: {
-          moduleDirectory: 'node_modules'
+          moduleDirectory: ['node_modules','github']
         }
       }),
       babel({
@@ -76,7 +76,7 @@ gulp.task('min', async function () {
     plugins: [
       resolve({
         customResolveOptions: {
-          moduleDirectory: 'node_modules'
+          moduleDirectory: ['node_modules','github']
         }
       }),
       babel({

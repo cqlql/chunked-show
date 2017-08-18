@@ -1,4 +1,5 @@
-import dragMobile from '../../corejs/src/drag/drag-plus-mobile';
+import {dragPlusMobile as dragMobile} from 'corejs';
+// import dragMobile from 'corejs/dist/drag/drag-plus-mobile';
 
 export default class ChunkedShow {
   constructor({eBox}) {

@@ -19,7 +19,7 @@
     top: 0;
     bottom: 0;
     display: none;
-    /*background-color: #f8f8f8;*/
+    background-color: #fff;
     overflow: auto;
 }
 .chunked-show .cs-cont {}
